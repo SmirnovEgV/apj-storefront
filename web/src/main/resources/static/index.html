@@ -14,7 +14,7 @@
         <div class="logo">APJ Storefront</div>
         <div class="search-cart">
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search pioneers...">
+                <input type="text" id="search" class="search-input" placeholder="Search names and specialties...">
             </div>
             <button class="cart-button">
                 🛒 Cart (0)
@@ -32,7 +32,7 @@
 <section class="featured-section">
     <div class="section-header">
         <h3>Featured Pioneers</h3>
-        <a href="#" style="color: #2563eb;">View All →</a>
+        <a href="product-listing.html">View All →</a>
     </div>
     <div class="card-grid" id="featured-cards">
         <!-- Cards will be inserted here by JavaScript -->
@@ -43,15 +43,15 @@
     <div class="categories-container">
         <h3>Browse Categories</h3>
         <div class="categories-grid">
-            <div class="category-card">
+            <div class="category-card" id="java-pioneers-card">
                 <h4>Java Pioneers</h4>
                 <p>Discover the minds behind Java's creation and evolution</p>
             </div>
-            <div class="category-card">
+            <div class="category-card" id="programming-languages-card">
                 <h4>Programming Languages</h4>
                 <p>Explore creators of influential programming languages</p>
             </div>
-            <div class="category-card">
+            <div class="category-card" id="theory-card">
                 <h4>Computer Science Theory</h4>
                 <p>Learn about theoretical computer science pioneers</p>
             </div>
@@ -83,5 +83,6 @@
         </div>
     </div>
 </footer>
+<div id="homepage"></div>
 </body>
 </html>
