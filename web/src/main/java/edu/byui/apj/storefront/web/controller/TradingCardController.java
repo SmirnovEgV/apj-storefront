@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Controller
+@RestController
 public class TradingCardController {
     private final TradingCardClientService tradingCardClientService;
 
@@ -42,9 +42,4 @@ public class TradingCardController {
         return tradingCardClientService.searchByNameOrContribution(query);
     }
 
-    // HTML view handler that handles all scenarios
-    @GetMapping("/product-listing.html")
-    public String productListing() {
-        return "product-listing";
-    }
 }
