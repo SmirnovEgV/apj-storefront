@@ -1,17 +1,17 @@
-package edu.byui.apj.storefront.apimongo.model;
+package edu.byui.apj.storefront.web.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class TradingCard {
+public class MongoTradingCard {
     private String _id;
     private String name;
     private String specialty;
     private String contribution;
-    private Double price;
+    private BigDecimal price;
     private String imageUrl;
 }

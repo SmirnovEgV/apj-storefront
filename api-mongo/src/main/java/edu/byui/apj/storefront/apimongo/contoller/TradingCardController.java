@@ -1,4 +1,4 @@
-package edu.byui.apj.storefront.apimongo.contoller;
+package edu.byui.apj.storefront.apimongo.controller;
 
 import edu.byui.apj.storefront.apimongo.model.TradingCard;
 import edu.byui.apj.storefront.apimongo.repository.TradingCardRepository;
