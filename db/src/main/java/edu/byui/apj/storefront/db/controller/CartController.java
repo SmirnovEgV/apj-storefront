@@ -25,8 +25,12 @@ public class CartController {
 
     @GetMapping("/{cartId}")
     public ResponseEntity<Cart> getCart(@PathVariable String cartId) {
-        Cart mycart = cartService.getCart(cartId);
-        return ResponseEntity.ok(mycart);
+        try {
+            Cart mycart = cartService.getCart(cartId);
+            return ResponseEntity.ok(mycart);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping
