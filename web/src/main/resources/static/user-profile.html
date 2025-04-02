@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/user-profile.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <div class="logo">APJ Storefront</div>
+        <div class="search-cart">
+            <div class="search-container">
+                <input type="text" id="search" class="search-input" placeholder="Search names and specialties...">
+            </div>
+            <button class="cart-button">
+                🛒 Cart (<span id="cart-item-count">0</span>)
+            </button>
+        </div>
+        <div class="cart-container">
+            <div class="cart-widget" id="cartWidget">
+                <p><strong>Your Cart:</strong></p>
+                <ul id="cartItems"></ul>
+            </div>
+        </div>
+        <div class="user-profile">
+            <p><a href="user-profile.html">👤 <span id="username">User Profile</span></a></p>
+        </div>
+    </div>
+</nav>
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-picture">
+            <img src="img/placeholder.webp" alt="Profile Picture">
+        </div>
+    </div>
+
+    <div class="profile-content">
+        <div class="profile-name">APJ Storefront User</div>
+        <div class="profile-role">Site Creator</div>
+
+        <div class="profile-stats">
+            <div class="stat-item">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Cards Purchased</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Years Membership</div>
+            </div>
+        </div>
+
+        <div class="profile-about">
+            <div class="about-title">About Me</div>
+            <div class="about-text">
+                I'm a passionate software engineer specializing in microservices architecture
+                and cloud-native applications. I'm experienced in Java, Spring Boot,
+                and distributed systems design. Oh, and I made this awesome website.
+            </div>
+        </div>
+        <form action="/perform-logout" method="POST">
+            <button type="submit">LOGOUT</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h5>About Us</h5>
+            <p style="color: #9ca3af;">Celebrating computer science history through collectible cards.</p>
+        </div>
+        <div class="footer-section">
+            <h5>Quick Links</h5>
+            <ul>
+                <li>New Releases</li>
+                <li>Popular Cards</li>
+                <li>Special Editions</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h5>Customer Service</h5>
+            <ul>
+                <li>Contact Us</li>
+                <li>Shipping Policy</li>
+                <li>Returns & Refunds</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

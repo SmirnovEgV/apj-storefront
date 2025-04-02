@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Trading Card Site</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <div class="logo">APJ Storefront</div>
+        <div class="search-cart">
+            <div class="search-container">
+                <input type="text" id="search" class="search-input" placeholder="Search names and specialties...">
+            </div>
+            <button class="cart-button">
+                🛒 Cart (<span id="cart-item-count">0</span>)
+            </button>
+        </div>
+        <div class="cart-container">
+            <div class="cart-widget" id="cartWidget">
+                <p><strong>Your Cart:</strong></p>
+                <ul id="cartItems"></ul>
+            </div>
+        </div>
+        <div class="user-profile">
+            <p><a href="user-profile.html">👤 User Profile</a></p>
+        </div>
+    </div>
+</nav>
+<form action="/perform-login" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+    <div><p id="login-error"></p></div>
+</form>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h5>About Us</h5>
+            <p style="color: #9ca3af;">Celebrating computer science history through collectible cards.</p>
+        </div>
+        <div class="footer-section">
+            <h5>Quick Links</h5>
+            <ul>
+                <li>New Releases</li>
+                <li>Popular Cards</li>
+                <li>Special Editions</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h5>Customer Service</h5>
+            <ul>
+                <li>Contact Us</li>
+                <li>Shipping Policy</li>
+                <li>Returns & Refunds</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script>
+    const urlParams = new URLSearchParams(window.location.search)
+    const error = urlParams.get("error")
+    if (error){
+        document.getElementById("login-error").innerText = error
+    }
+</script>
+</body>
+</html>
